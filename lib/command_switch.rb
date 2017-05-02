@@ -7,9 +7,9 @@ def command_switch(choice)
   when 'update'
     update_function
   when '--version'
-    puts 'Version DEV 000'
+    puts "Version #{@version}"
   when '-v'
-    puts 'Version DEV 000'
+    puts "Version #{@version}"
   when '--help'
     help_menu
   when '-h'
