@@ -1,19 +1,17 @@
-def npm_update
-  puts 'updating npm'
-  results_npm = `npm update`
-  puts results_npm
-  puts "done updating npm\n"
-end
-
-def brew_update
-  puts 'updating homebrew'
-  results_brew = `brew update`
-  puts results_brew
-  puts "done updating homebrew\n"
-end
+require 'call_response'
+@npm_update = CallResponse.new("\nupdating npm repositories",
+                               'done updating npm repositories',
+                               'npm update')
+@brew_update = CallResponse.new("\nupdating homebrew casks",
+                                'done updating homebrew casks',
+                                'brew update')
+@apt_get_update = CallResponse.new("\nupdating apt repositories",
+                                   'done updating apt repositories',
+                                   'sudo apt-get update')
 
 def update_function
-  npm_update unless `which npm` == ''
+  @npm_update.run unless `which npm` == ''
+  @apt_get_update.run unless `which apt-get` == ''
   return if `which brew` == ''
-  brew_update
+  @brew_update.run
 end
