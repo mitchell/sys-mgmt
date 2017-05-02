@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-response = `gem build mgmt.gemspec`
+response = `gem build sys-mgmt.gemspec`
 puts response
 
-response = `gem install ./mgmt-0.0.2.gem`
+response = `gem install ./sys-mgmt-0.0.3.gem`
 puts response
