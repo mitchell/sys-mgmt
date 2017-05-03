@@ -1,6 +1,6 @@
-def sleep_function
-  exec('sudo shutdown -s now') unless `which launchctl` == ''
-  exec('sudo systemctl sleep') unless `which systemctl` == ''
+def suspend_function
+  `sudo shutdown -s now` unless `which launchctl` == ''
+  `sudo systemctl suspend` unless `which systemctl` == ''
 end
 
 def poweroff_function

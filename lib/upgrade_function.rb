@@ -7,6 +7,9 @@ require 'call_response'
 @brew_upgrade = CallResponse.new("\nupgrading homebrew packages",
                                  'done upgrading homebrew packages',
                                  'brew upgrade')
+@apt_get_upgrade = CallResponse.new("\nupgrading apt packages",
+                                    'done upgrading apt packages',
+                                    'sudo apt-get upgrade')
 
 def upgrade_function
   @gem_upgrade.run unless `which gem` == ''

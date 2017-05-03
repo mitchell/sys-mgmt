@@ -2,6 +2,7 @@ require 'help_menu'
 require 'update_function'
 require 'upgrade_function'
 require 'power_functions'
+require 'serve_function'
 
 # rubocop:disable all
 def command_switch(choice)
@@ -15,8 +16,10 @@ def command_switch(choice)
     poweroff_function
   elsif choice == 'reboot'
     reboot_function
-  elsif choice == 'sleep'
-    sleep_function
+  elsif choice == 'suspend'
+    suspend_function
+  elsif choice == 'serve'
+    serve_function
   elsif choice == '--help' || choice == '-h'
     help_menu
   else

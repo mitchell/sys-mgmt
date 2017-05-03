@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'sys-mgmt'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.date        = '2017-05-01'
   s.summary     = 'Hola!'
   s.description = 'A simple hello world gem'
@@ -8,7 +8,8 @@ Gem::Specification.new do |s|
   s.email       = 'mitchelljfsimon@gmail.com'
   s.files       = ['lib/mgmt.rb', 'lib/command_switch.rb', 'lib/help_menu.rb',
                    'lib/update_function.rb', 'lib/call_response.rb',
-                   'lib/upgrade_function.rb', 'lib/power_functions.rb']
+                   'lib/upgrade_function.rb', 'lib/power_functions.rb',
+                   'lib/serve_function.rb']
   s.executables << 'mm'
   s.homepage    = 'https://www.mitchelljfsimon.com'
   s.license     = 'MIT'

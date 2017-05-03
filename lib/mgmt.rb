@@ -1,8 +1,7 @@
 def main
   require 'command_switch'
-  require 'help_menu'
 
-  @version = 'DEV-0.0.3'
+  @version = 'DEV-0.0.4'
 
   choice = @argv[0]
   command_switch(choice)
