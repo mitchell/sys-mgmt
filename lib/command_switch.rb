@@ -18,6 +18,8 @@ def command_switch(choice)
     reboot_function
   elsif choice == 'suspend'
     suspend_function
+  elsif choice == 'regui'
+    redisplay_function
   elsif choice == 'serve'
     serve_function
   elsif choice == '--help' || choice == '-h'

@@ -2,7 +2,7 @@
 def help_menu
   puts "mgmt - a cross platform, minimal, unix-like-system management\n" \
        "       software. Version #{@version}.\n\n" \
-       "usage: mm <command | argument> \n\n" \
+       "usage: mm <command> [argument] \n\n" \
        "example:\n" \
        "  mm update           update all installed package manager's\n" \
        "                      repositories\n" \
@@ -15,6 +15,7 @@ def help_menu
        "  upgrade     upgrades all installed package manager's packages\n" \
        "  poweroff    makes the system poweroff\n" \
        "  reboot      makes the system reboot\n" \
+       "  regui       restart the userspace on macOS, restart DM on Linux\n" \
        "  suspend     puts the system in a suspended state\n" \
        "  serve       serves the current direction on localhost:9292\n\n" \
        "arguments:\n" \
