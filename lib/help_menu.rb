@@ -1,7 +1,7 @@
 # rubocop:disable Metrics/MethodLength
 def help_menu
   puts "mgmt - a cross platform, minimal, unix-like-system management\n" \
-       "       software. Version #{@version}.\n\n" \
+       "       software. version #{@version}.\n\n" \
        "usage: mm <command> [argument] \n\n" \
        "example:\n" \
        "  mm update           update all installed package manager's\n" \
@@ -11,13 +11,14 @@ def help_menu
        '  mm serve -p 8080    serve the current working directory to port ' \
        "8080\n\n" \
        "commands:\n" \
-       "  update      updates all installed package manager's repositories\n" \
-       "  upgrade     upgrades all installed package manager's packages\n" \
-       "  poweroff    makes the system poweroff\n" \
-       "  reboot      makes the system reboot\n" \
-       "  regui       restart the userspace on macOS, restart DM on Linux\n" \
-       "  suspend     puts the system in a suspended state\n" \
-       "  serve       serves the current direction on localhost:9292\n\n" \
+       "  update     updates all installed package manager's repositories\n" \
+       "  upgrade    upgrades all installed package manager's packages\n" \
+       "  off        makes the system poweroff\n" \
+       "  reboot     makes the system reboot\n" \
+       "  regui      restart the userspace on macOS, restart DM on Linux\n" \
+       "  suspend    puts the system in a suspended state\n" \
+       "  serve      serves the current direction on localhost:9292\n" \
+       "  help, h    shows this menu\n\n" \
        "arguments:\n" \
        "  -h, --help       print this menu\n" \
        "  -v, --version    print version of mgmt\n" \

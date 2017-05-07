@@ -6,8 +6,6 @@ def serve_function
          else
            9292
          end
-  ruby_serve = CallResponse.new("\nstarting minimal ruby web/file server",
-                                'shutdown minimal server',
-                                "ruby -run -ehttpd . -p#{port}")
-  ruby_serve.run
+  puts 'starting simple ruby-based webserver'
+  exec("ruby -run -e httpd . -p #{port}")
 end

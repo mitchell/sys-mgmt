@@ -6,13 +6,11 @@ require 'serve_function'
 
 # rubocop:disable all
 def command_switch(choice)
-  if choice == '--version' || choice == '-v'
-    puts "Version #{@version}"
-  elsif choice == 'update'
+  if choice == 'update'
     update_function
   elsif choice == 'upgrade'
     upgrade_function
-  elsif choice == 'poweroff'
+  elsif choice == 'off'
     poweroff_function
   elsif choice == 'reboot'
     reboot_function
@@ -22,10 +20,12 @@ def command_switch(choice)
     redisplay_function
   elsif choice == 'serve'
     serve_function
-  elsif choice == '--help' || choice == '-h'
+  elsif choice == '--version' || choice == '-v'
+    puts @version
+  elsif choice == '--help' || choice == '-h' || choice == 'help' || choice == 'h'
     help_menu
   else
-    puts 'welcome to mgmt. please try \'mm -h\' to see the mgmt help menu'
+    puts 'welcome to mgmt. please try \'mm help\' to see the mgmt help menu'
     exit(1)
   end
 end
