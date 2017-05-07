@@ -4,5 +4,5 @@ puts 'welcome to mgmt. building and installing...'
 response = `gem build sys-mgmt.gemspec`
 puts response
 
-response = `gem install ./sys-mgmt-0.0.4.gem`
+response = `sudo gem install ./sys-mgmt-0.0.4.gem`
 puts response

@@ -14,6 +14,7 @@ require 'call_response'
 def upgrade_function
   @gem_upgrade.run unless `which gem` == ''
   @npm_upgrade.run unless `which npm` == ''
+  @apt_get_upgrade.run unless `which apt-get` == ''
   return if `which brew` == ''
   @brew_upgrade.run
 end
