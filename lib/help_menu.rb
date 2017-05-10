@@ -11,14 +11,16 @@ def help_menu
        '  mm serve -p 8080    serve the current working directory to port ' \
        "8080\n\n" \
        "commands:\n" \
-       "  update     updates all installed package manager's repositories\n" \
-       "  upgrade    upgrades all installed package manager's packages\n" \
-       "  off        makes the system poweroff\n" \
-       "  reboot     makes the system reboot\n" \
-       "  regui      restart the userspace on macOS, restart DM on Linux\n" \
-       "  suspend    puts the system in a suspended state\n" \
-       "  serve      serves the current direction on localhost:9292\n" \
-       "  help, h    shows this menu\n\n" \
+       '  update, up     updates all installed package manager\'s ' \
+       "repositories\n" \
+       "  upgrade, ug    upgrades all installed package manager's packages\n" \
+       "  off, o         makes the system poweroff\n" \
+       "  reboot, re     makes the system reboot\n" \
+       '  regui, rg      restart the userspace on macOS, restart DM on ' \
+       "Linux\n" \
+       "  suspend, ss    puts the system in a suspended state\n" \
+       "  serve, sv      serves the current direction on localhost:9292\n" \
+       "  help, h        shows this menu\n\n" \
        "arguments:\n" \
        "  -h, --help       print this menu\n" \
        "  -v, --version    print version of mgmt\n" \
