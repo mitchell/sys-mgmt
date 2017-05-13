@@ -2,7 +2,7 @@
 def help_menu
   puts "mgmt - a cross platform, minimal, unix-like-system management\n" \
        "       software. version #{@version}.\n\n" \
-       "usage: mm <command> [argument] \n\n" \
+       "usage: mm [command] [argument] \n\n" \
        "example:\n" \
        "  mm update           update all installed package manager's\n" \
        "                      repositories\n" \
