@@ -19,6 +19,7 @@ def help_menu
        '  regui, rg      restart the userspace on macOS, restart DM on ' \
        "Linux\n" \
        "  suspend, ss    puts the system in a suspended state\n" \
+       "  lock, lk       locks the system\n" \
        "  serve, sv      serves the current direction on localhost:9292\n" \
        "  help, h        shows this menu\n\n" \
        "arguments:\n" \

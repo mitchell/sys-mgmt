@@ -17,3 +17,11 @@ def reboot_function
   exec('sudo launchctl reboot') unless `which launchctl` == ''
   exec('sudo systemctl reboot') unless `which launchctl` == ''
 end
+
+def lock_function
+  exec('lightlocker-command -l') unless `which lightlocker-command` == ''
+  return if `which launchctl` == ''
+  exec('/System/Library/CoreServices/Menu\ ' \
+       'Extras/User.menu/Contents/Resources/CGSession ' \
+       '-suspend')
+end

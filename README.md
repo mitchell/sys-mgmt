@@ -9,7 +9,7 @@ heavily under development
 mgmt - a cross platform, minimal, unix-like-system management
        software. version DEV-0.0.4.
 
-usage: mm [command] [argument]
+usage: mm [command] [argument] 
 
 example:
   mm update           update all installed package manager's
@@ -25,10 +25,12 @@ commands:
   reboot, re     makes the system reboot
   regui, rg      restart the userspace on macOS, restart DM on Linux
   suspend, ss    puts the system in a suspended state
+  lock, lk       locks the system
   serve, sv      serves the current direction on localhost:9292
   help, h        shows this menu
 
 arguments:
   -h, --help       print this menu
   -v, --version    print version of mgmt
+  -p, --port       (only for serve command) choose what port to host on
 ```

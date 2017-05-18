@@ -16,6 +16,8 @@ def command_switch(choice)
     reboot_function
   elsif choice == 'suspend' || choice == 'ss'
     suspend_function
+  elsif choice == 'lock' || choice == 'lk'
+    lock_function
   elsif choice == 'regui' || choice == 'rg'
     redisplay_function
   elsif choice == 'serve' || choice == 'sv'
