@@ -8,9 +8,9 @@ describe CallResponse do
 
   describe 'properties' do
     it 'should equal parameters given' do
-      assert_equal 'test start', @call_response.start_message
-      assert_equal 'test end', @call_response.end_message
-      assert_equal 'true', @call_response.command
+      @call_response.start_message.must_equal 'test start'
+      @call_response.end_message.must_equal 'test end'
+      @call_response.command.must_equal 'true'
     end
   end
 end
