@@ -1,5 +1,6 @@
 # simple call and response style command class
 class CallResponse
+  attr_accessor :start_message, :end_message, :command
   def initialize(start_message, end_message, command)
     @start_message = start_message
     @end_message = end_message

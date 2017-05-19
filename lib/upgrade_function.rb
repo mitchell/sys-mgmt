@@ -11,7 +11,7 @@ require 'call_response'
                                     'done upgrading apt packages',
                                     'sudo apt-get upgrade')
 
-def upgrade_function
+@upgrade_function = lambda do
   @gem_upgrade.run unless `which gem` == ''
   @npm_upgrade.run unless `which npm` == ''
   @apt_get_upgrade.run unless `which apt-get` == ''

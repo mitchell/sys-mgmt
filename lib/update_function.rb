@@ -9,7 +9,7 @@ require 'call_response'
                                    'done updating apt repositories',
                                    'sudo apt-get update')
 
-def update_function
+@update_function = lambda do
   @npm_update.run unless `which npm` == ''
   @apt_get_update.run unless `which apt-get` == ''
   return if `which brew` == ''

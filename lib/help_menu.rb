@@ -1,5 +1,5 @@
-# rubocop:disable Metrics/MethodLength
-def help_menu
+# rubocop:disable Metrics/BlockLength
+@help_menu = lambda do
   puts "mgmt - a cross platform, minimal, unix-like-system management\n" \
        "       software. version #{@version}.\n\n" \
        "usage: mm [command] [argument] \n\n" \

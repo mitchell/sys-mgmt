@@ -1,6 +1,4 @@
-require 'call_response'
-
-def serve_function
+@serve_function = lambda do
   port = if @argv[1] == '-p' || @argv[1] == '--port'
            @argv[2]
          else

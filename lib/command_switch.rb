@@ -4,30 +4,28 @@ require 'upgrade_function'
 require 'power_functions'
 require 'serve_function'
 
-# rubocop:disable all
+@version_function = -> { puts @version }
+@commands = { 'update' => @update_function, 'up' => @update_function,
+              'upgrade' => @upgrade_function, 'ug' => @upgrade_function,
+              'off' => @poweroff_function, 'o' => @poweroff_function,
+              'reboot' => @reboot_function, 're' => @reboot_function,
+              'suspend' => @suspend_function, 'ss' => @suspend_function,
+              'lock' => @lock_function, 'lk' => @lock_function,
+              'regui' => @redisplay_function, 'rg' => @redisplay_function,
+              'serve' => @serve_function, 'sv' => @serve_function,
+              '--version' => @version_function, '-v' => @version_function,
+              '--help' => @help_menu, '-h' => @help_menu,
+              'help' => @help_menu, 'h' => @help_menu }
+
 def command_switch(choice)
-  if choice == 'update' || choice == 'up'
-    update_function
-  elsif choice == 'upgrade' || choice == 'ug'
-    upgrade_function
-  elsif choice == 'off' || choice == 'o'
-    poweroff_function
-  elsif choice == 'reboot' || choice == 're'
-    reboot_function
-  elsif choice == 'suspend' || choice == 'ss'
-    suspend_function
-  elsif choice == 'lock' || choice == 'lk'
-    lock_function
-  elsif choice == 'regui' || choice == 'rg'
-    redisplay_function
-  elsif choice == 'serve' || choice == 'sv'
-    serve_function
-  elsif choice == '--version' || choice == '-v'
-    puts @version
-  elsif choice == '--help' || choice == '-h' || choice == 'help' || choice == 'h'
-    help_menu
-  else
-    puts 'welcome to mgmt. please try \'mm help\' to see the mgmt help menu'
-    exit(1)
+  command_found = 0
+  @commands.each do |command, function|
+    if choice == command
+      command_found = 1
+      function.call
+    end
   end
+  return unless command_found.zero?
+  puts 'welcome to mgmt. please try \'mm help\' to see the mgmt help menu'
+  exit(1)
 end
