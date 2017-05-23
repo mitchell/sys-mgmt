@@ -1,12 +1,12 @@
 require 'call_response'
-@npm_update = CallResponse.new("\nupdating npm repositories",
-                               'done updating npm repositories',
+@npm_update = CallResponse.new("\nUpdating npm repositories",
+                               'Done updating npm repositories',
                                'npm update')
-@brew_update = CallResponse.new("\nupdating homebrew casks",
-                                'done updating homebrew casks',
+@brew_update = CallResponse.new("\nUpdating homebrew casks",
+                                'Done updating homebrew casks',
                                 'brew update')
-@apt_get_update = CallResponse.new("\nupdating apt repositories",
-                                   'done updating apt repositories',
+@apt_get_update = CallResponse.new("\nUpdating apt repositories",
+                                   'Done updating apt repositories',
                                    'sudo apt-get update')
 
 @update_function = lambda do

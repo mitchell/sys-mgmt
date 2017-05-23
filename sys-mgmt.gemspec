@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = 'A program with loads of system administration functions.'
   s.authors     = ['Mitchell Simon']
   s.email       = 'mitchelljfsimon@gmail.com'
-  s.files       = ['lib/mgmt.rb', 'lib/command_switch.rb', 'lib/help_menu.rb',
+  s.files       = ['lib/mgmt.rb', 'lib/command_function.rb', 'lib/help_menu.rb',
                    'lib/update_function.rb', 'lib/call_response.rb',
                    'lib/upgrade_function.rb', 'lib/power_functions.rb',
                    'lib/serve_function.rb']
