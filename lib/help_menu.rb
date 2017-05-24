@@ -20,7 +20,7 @@
        "Linux\n" \
        "  suspend, ss    puts the system in a suspended state\n" \
        "  lock, lk       locks the system\n" \
-       "  serve, sv      serves the current direction on localhost:9292\n" \
+       "  serve, sv      serves the current directory on localhost:9292\n" \
        "  help, h        shows this menu\n\n" \
        "arguments:\n" \
        "  -h, --help       print this menu\n" \
