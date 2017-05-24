@@ -26,7 +26,7 @@ commands:
   regui, rg      restart the userspace on macOS, restart DM on Linux
   suspend, ss    puts the system in a suspended state
   lock, lk       locks the system
-  serve, sv      serves the current direction on localhost:9292
+  serve, sv      serves the current directory on localhost:9292
   help, h        shows this menu
 
 arguments:
