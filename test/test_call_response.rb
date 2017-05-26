@@ -3,7 +3,7 @@ require 'call_response'
 
 describe CallResponse do
   before do
-    @call_response = CallResponse.new('test start', 'test end', 'true')
+    @call_response = CallResponse.new 'test start', 'test end', 'true'
   end
 
   describe 'properties' do

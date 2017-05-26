@@ -22,5 +22,5 @@ def main
                'help' => @help_menu, 'h' => @help_menu }
 
   choice = @argv[0]
-  command_function(choice, commands)
+  command_function choice, commands
 end

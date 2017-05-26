@@ -9,7 +9,7 @@ class CallResponse
 
   def run
     puts @start_message
-    system(@command)
+    system @command
     puts @end_message
   end
 end

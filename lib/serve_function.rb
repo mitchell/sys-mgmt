@@ -5,5 +5,5 @@
            9292
          end
   puts 'starting simple ruby-based webserver'
-  exec("ruby -run -e httpd . -p #{port}")
+  exec "ruby -run -e httpd . -p #{port}"
 end
