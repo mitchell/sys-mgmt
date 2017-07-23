@@ -1,9 +1,9 @@
 require 'help_menu'
-require 'update_function'
-require 'upgrade_function'
+require 'package_functions'
 require 'power_functions'
 require 'serve_function'
 require 'command_function'
+require 'kill_function'
 
 # rubocop:disable Metrics/MethodLength
 def main
@@ -17,6 +17,7 @@ def main
                'lock' => @lock_function, 'lk' => @lock_function,
                'regui' => @redisplay_function, 'rg' => @redisplay_function,
                'serve' => @serve_function, 'sv' => @serve_function,
+               'kill' => @kill_function, 'k' => @kill_function,
                '--version' => version_function, '-v' => version_function,
                '--help' => @help_menu, '-h' => @help_menu,
                'help' => @help_menu, 'h' => @help_menu }

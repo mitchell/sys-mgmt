@@ -15,11 +15,12 @@ end
 
 @reboot_function = lambda do
   exec 'sudo launchctl reboot' unless `which launchctl`.empty?
-  exec 'sudo systemctl reboot' unless `which launchctl`.empty?
+  exec 'sudo systemctl reboot' unless `which systemctl`.empty?
 end
 
 @lock_function = lambda do
   exec 'light-locker-command -l' unless `which light-locker-command`.empty?
+  exec 'physlock' unless `which physlock`.empty?
   return if `which launchctl`.empty?
   exec '/System/Library/CoreServices/Menu\ ' \
        'Extras/User.menu/Contents/Resources/CGSession ' \
