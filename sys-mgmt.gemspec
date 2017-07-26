@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'sys-mgmt'
-  s.version     = '0.0.4'
-  s.date        = '2017-05-01'
+  s.version     = '0.0.5'
+  s.date        = '2017-07-26'
   s.summary     = 'A minimal unix-like-system management program.'
   s.description = 'A program with loads of system administration functions.'
   s.authors     = ['Mitchell Simon']
