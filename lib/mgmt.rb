@@ -7,7 +7,7 @@ require 'kill_function'
 
 # rubocop:disable Metrics/MethodLength
 def main
-  @version = 'DEV-0.0.4'
+  @version = 'DEV-0.0.5'
   version_function = -> { puts @version }
   commands = { 'update' => @update_function, 'up' => @update_function,
                'upgrade' => @upgrade_function, 'ug' => @upgrade_function,

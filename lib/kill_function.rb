@@ -6,6 +6,6 @@
     system "pgrep -fa #{@argv[1]}"
     print 'What process ID would you like to kill? '
     kpid = STDIN.gets.chomp
-    system "kill #{kpid}" unless kpid == ''
+    system "kill #{kpid}" unless kpid.empty?
   end
 end
