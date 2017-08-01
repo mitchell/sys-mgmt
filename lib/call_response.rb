@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # simple call and response style command class
 class CallResponse
   attr_reader :start_message, :end_message, :command

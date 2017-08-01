@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 puts 'welcome to mgmt. building and installing...'
 
-system('gem build ./sys-mgmt.gemspec')
+bld_res = `gem build ./sys-mgmt.gemspec`
+puts bld_res.to_s
+version = /(?<=Version\: )\d\.\d\.\d/.match bld_res
 
-system('sudo gem install ./sys-mgmt-0.0.4.gem')
+system "sudo gem install ./sys-mgmt-#{version[0]}.gem"

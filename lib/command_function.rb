@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def command_function(choice, commands)
   command_found = 0
   commands.each do |command, function|

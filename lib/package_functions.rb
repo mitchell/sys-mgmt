@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'call_response'
 @npm_update = CallResponse.new "\nUpdating npm repositories",
                                'Done updating npm repositories',

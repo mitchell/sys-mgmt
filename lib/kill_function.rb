@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 @kill_function = lambda do
   if @argv[1] == '-i' || @argv[1] == '--id'
     system "kill #{@argv[2]}"

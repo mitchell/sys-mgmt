@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'help_menu'
 require 'package_functions'
 require 'power_functions'

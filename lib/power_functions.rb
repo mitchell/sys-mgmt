@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 @suspend_function = lambda do
   exec 'sudo shutdown -s now' unless `which launchctl`.empty?
-  exec 'sudo systemctl suspend' unless `which systemctl`.empty?
+  exec 'systemctl suspend' unless `which systemctl`.empty?
 end
 
 @poweroff_function = lambda do
-  exec 'sudo systemctl poweroff' unless `which systemctl`.empty?
+  exec 'systemctl poweroff' unless `which systemctl`.empty?
   exec 'sudo launchctl reboot halt' unless `which launchctl`.empty?
 end
 
@@ -15,7 +17,7 @@ end
 
 @reboot_function = lambda do
   exec 'sudo launchctl reboot' unless `which launchctl`.empty?
-  exec 'sudo systemctl reboot' unless `which systemctl`.empty?
+  exec 'systemctl reboot' unless `which systemctl`.empty?
 end
 
 @lock_function = lambda do
