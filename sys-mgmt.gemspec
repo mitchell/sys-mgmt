@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |s|
   s.name        = 'sys-mgmt'
   s.version     = '0.0.5'
@@ -7,9 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ['Mitchell Simon']
   s.email       = 'mitchelljfsimon@gmail.com'
   s.files       = ['lib/mgmt.rb', 'lib/command_function.rb', 'lib/help_menu.rb',
-                   'lib/call_response.rb', 'lib/power_functions.rb',
-                   'lib/serve_function.rb', 'lib/kill_function.rb', 
-                   'lib/package_functions.rb']
+                   'lib/serve_function.rb', 'lib/kill_function.rb',
+                   'lib/power_functions.rb', 'lib/package_functions.rb']
   s.executables << 'mm'
   s.homepage    = 'https://www.mitchelljfsimon.com'
   s.license     = 'MIT'
